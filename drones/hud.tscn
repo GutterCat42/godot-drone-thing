@@ -1,0 +1,299 @@
+[gd_scene load_steps=5 format=3 uid="uid://clublju8kqcsb"]
+
+[ext_resource type="Script" path="res://drones/hud.gd" id="1_kn460"]
+[ext_resource type="Texture2D" uid="uid://cl6pvvjry4muv" path="res://hud/crosshair.png" id="2_sto4v"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_c2aeu"]
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_04yx0"]
+font_size = 32
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kn460")
+
+[node name="Crosshair" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Crosshair"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_sto4v")
+
+[node name="PitchLadder" type="Control" parent="Crosshair"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Horizon" type="Control" parent="Crosshair/PitchLadder"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -600.0
+offset_right = 600.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Crosshair/PitchLadder/Horizon"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -2.5
+offset_right = 500.0
+offset_bottom = 2.5
+grow_vertical = 2
+
+[node name="ColorRect2" type="ColorRect" parent="Crosshair/PitchLadder/Horizon"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -2.5
+offset_bottom = 2.5
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="NegativeLine" type="Control" parent="Crosshair/PitchLadder"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = 400.0
+offset_right = 400.0
+offset_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Crosshair/PitchLadder/NegativeLine"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -2.5
+offset_right = 300.0
+offset_bottom = 2.5
+grow_vertical = 2
+
+[node name="ColorRect2" type="ColorRect" parent="Crosshair/PitchLadder/NegativeLine"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -2.5
+offset_bottom = 2.5
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="NegativeLine2" type="Control" parent="Crosshair/PitchLadder"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = 800.0
+offset_right = 400.0
+offset_bottom = 800.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Crosshair/PitchLadder/NegativeLine2"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -2.5
+offset_right = 300.0
+offset_bottom = 2.5
+grow_vertical = 2
+
+[node name="ColorRect2" type="ColorRect" parent="Crosshair/PitchLadder/NegativeLine2"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -2.5
+offset_bottom = 2.5
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="PositiveLine" type="Control" parent="Crosshair/PitchLadder"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -400.0
+offset_right = 400.0
+offset_bottom = -400.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Crosshair/PitchLadder/PositiveLine"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -2.5
+offset_right = 300.0
+offset_bottom = 2.5
+grow_vertical = 2
+
+[node name="ColorRect2" type="ColorRect" parent="Crosshair/PitchLadder/PositiveLine"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -2.5
+offset_bottom = 2.5
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="PositiveLine2" type="Control" parent="Crosshair/PitchLadder"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -800.0
+offset_right = 400.0
+offset_bottom = -800.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Crosshair/PitchLadder/PositiveLine2"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -2.5
+offset_right = 300.0
+offset_bottom = 2.5
+grow_vertical = 2
+
+[node name="ColorRect2" type="ColorRect" parent="Crosshair/PitchLadder/PositiveLine2"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -2.5
+offset_bottom = 2.5
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="AirspeedLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_right = 40.0
+offset_bottom = 11.5
+grow_vertical = 2
+text = "SPD"
+label_settings = SubResource("LabelSettings_c2aeu")
+
+[node name="AltitudeLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -85.0
+offset_top = -33.5
+offset_bottom = 33.5
+grow_horizontal = 0
+grow_vertical = 2
+text = "ALT"
+label_settings = SubResource("LabelSettings_c2aeu")
+horizontal_alignment = 2
+
+[node name="VSILabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -45.715
+offset_top = 10.0
+offset_right = 2.28503
+offset_bottom = 55.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "VSI"
+label_settings = SubResource("LabelSettings_c2aeu")
+horizontal_alignment = 2
+
+[node name="PitchLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -720.0
+offset_top = -22.5
+offset_right = -628.0
+offset_bottom = 22.5
+grow_horizontal = 0
+grow_vertical = 2
+text = "PITCH"
+label_settings = SubResource("LabelSettings_04yx0")
+
+[node name="VelocityVector" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sprite2D2" type="Sprite2D" parent="VelocityVector"]
+position = Vector2(960, 540)
+rotation = 0.785398
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_sto4v")

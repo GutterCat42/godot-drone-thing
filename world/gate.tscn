@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnl727kyyxca"]
+
+[ext_resource type="PackedScene" uid="uid://dtbhad60xf40h" path="res://world/wall.tscn" id="1_ts546"]
+
+[node name="Gate" type="Node3D"]
+
+[node name="Wall" parent="." instance=ExtResource("1_ts546")]
+transform = Transform3D(2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 1, 0)
+
+[node name="Wall2" parent="." instance=ExtResource("1_ts546")]
+transform = Transform3D(2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, -1, 0)
+
+[node name="Wall3" parent="." instance=ExtResource("1_ts546")]
+transform = Transform3D(-8.74228e-08, 0.2, 0, -2, -8.74228e-09, 0, 0, 0, 0.2, 1, 0, 0)
+
+[node name="Wall4" parent="." instance=ExtResource("1_ts546")]
+transform = Transform3D(-8.74228e-08, 0.2, 0, -2, -8.74228e-09, 0, 0, 0, 0.2, -1, 0, 0)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_color = Color(0.0156863, 1, 0, 1)
+light_energy = 5.0

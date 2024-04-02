@@ -1,0 +1,72 @@
+[gd_scene load_steps=8 format=3 uid="uid://bomyystxdn5na"]
+
+[ext_resource type="PackedScene" uid="uid://7d4ov5r0co3r" path="res://drones/drone.tscn" id="1_qa12a"]
+[ext_resource type="PackedScene" uid="uid://dtbhad60xf40h" path="res://world/wall.tscn" id="2_mya05"]
+[ext_resource type="Script" path="res://world/tracking_camera.gd" id="3_n7msv"]
+[ext_resource type="PackedScene" uid="uid://cnl727kyyxca" path="res://world/gate.tscn" id="4_um2nc"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_73t4y"]
+
+[sub_resource type="Sky" id="Sky_dy8e7"]
+sky_material = SubResource("ProceduralSkyMaterial_73t4y")
+
+[sub_resource type="Environment" id="Environment_u7203"]
+background_mode = 2
+sky = SubResource("Sky_dy8e7")
+volumetric_fog_density = 0.01
+
+[node name="World" type="Node3D"]
+
+[node name="Drone" parent="." instance=ExtResource("1_qa12a")]
+transform = Transform3D(0.793962, 0.161807, 0.58604, -0.107018, 0.986077, -0.127272, -0.598475, 0.0383322, 0.800224, 0, 2.53782, 0)
+
+[node name="Wall" parent="." instance=ExtResource("2_mya05")]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, -49.9815, 0)
+
+[node name="Wall2" parent="." instance=ExtResource("2_mya05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.525371, -12)
+
+[node name="Wall3" parent="." instance=ExtResource("2_mya05")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.21157, 0.50684, -8.52078)
+
+[node name="Wall4" parent="." instance=ExtResource("2_mya05")]
+transform = Transform3D(5.64284, 0, 0, 0, 5.64284, 0, 0, 0, 5.64284, -5.9642, 0.50684, 14.1095)
+
+[node name="Wall5" parent="." instance=ExtResource("2_mya05")]
+transform = Transform3D(17.4468, 0, 0, 0, 0.931434, 0, 0, 0, 11.1853, -15.9892, 8.91793, 6.35026)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.610671, 0, 0.791885, 0, 1, 0, -0.791885, 0, -0.610671, 5.02595, 2, 1.27102)
+fov = 42.0
+script = ExtResource("3_n7msv")
+
+[node name="Gate" parent="." instance=ExtResource("4_um2nc")]
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, -5, 3, -7)
+
+[node name="Gate2" parent="." instance=ExtResource("4_um2nc")]
+transform = Transform3D(1.46133, 0, -1.36548, 0, 2, 0, 1.36548, 0, 1.46133, -19.2402, 3.85189, 7.21636)
+
+[node name="Gate3" parent="." instance=ExtResource("4_um2nc")]
+transform = Transform3D(1.76252, 0, -0.945255, 0, 2, 0, 0.945255, 0, 1.76252, 20.2466, 8.08997, 14.6733)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_u7203")
+
+[node name="Wall6" parent="." instance=ExtResource("2_mya05")]
+transform = Transform3D(1, 0, 0, 0, 8.73311, 0, 0, 0, 1, -5.25452, 3.97333, -21.7678)
+
+[node name="Wall7" parent="." instance=ExtResource("2_mya05")]
+transform = Transform3D(1, 0, 0, 0, 8.73311, 0, 0, 0, 1, 2.33775, 3.97333, -25.028)
+
+[node name="Wall8" parent="." instance=ExtResource("2_mya05")]
+transform = Transform3D(1, 0, 0, 0, 8.73311, 0, 0, 0, 1, 25.9827, 3.97333, -2.85297)
+
+[node name="Wall9" parent="." instance=ExtResource("2_mya05")]
+transform = Transform3D(8, 0, 0, 0, 42, 0, 0, 0, 8, -35.8444, 19.3942, -23.7855)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.495676, 0.771237, -0.399373, -0.285096, 0.578845, 0.763975, 0.820381, -0.264825, 0.506796, 27.1183, 5.38188, 12.1283)
+light_color = Color(1, 1, 0.956863, 1)
+
+[node name="Gate4" parent="." instance=ExtResource("4_um2nc")]
+transform = Transform3D(3, 0, 0, 0, -1.31134e-07, 3, 0, -3, -1.31134e-07, -29.2036, 37.7632, -23.94)
