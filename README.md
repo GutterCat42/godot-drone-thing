@@ -6,6 +6,8 @@ I'm using Godot 4.2 to make this. Please note that when I say drone I mean quadc
 
 Have fun working out how to fly in this game.
 
-**Disclaimer:** I've never flown a proper racing drone in acro mode before, so I have no idea whether this flight model is accurate or not. That's why I'm not calling it a simulator. I'm calling it a game, or a thing.
+**Disclaimer:** I've never flown a proper racing drone in acro mode before, so I have no idea whether this flight model is accurate or not. That's why I'm not calling it a simulator. I'm calling it a game, or a thing. 
+
+### UPDATE a couple years later I know how drones work now, and this is further away from the truth than I possibly could have imagined. Leaving it up so I can laugh at how I used to think it worked!
 
 Currently, controls are only supported for a twin-stick gamepad (I've been using a Logitech F710. Hm? Why are you laughing? I'm not joking. I actually am using one.)
